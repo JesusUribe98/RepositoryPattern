@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataBaseObjectModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="c82e6f76-00c0-4f63-9581-d1608fac071b" namespace="RepositoryPattern.DAL.XPO.RepositoryPattern" dataBaseShemaInfo="H4sIAAAAAAAEAMVWy27bMBC8F+g/GD6HFp8SVcguGjsNir6Mpil6XYrLRKgsBaLkJH9fynbc2E1fqJHctLOzIGd3SDF7ebMoB0tsfFFX4yEb0eHLyfNn2TF4PGvrBi7wTeXqQWBV/sWNt+PhZdtevYii6+vr0bUY1c1FxCll0df3787yS1zAcEsu/kwmReVbqHIchlUHg+wzmBJ9v+QqvkPuAXfQB1jg5Nxj83X+MYt+QFvWSdVjk7bpMIs2wTY5K3wPnF9ZaHHioPSBtAtuuaddYd/YCWjlmHOO5JQBkUo5kiqNRKjEJGgwdiLJog15Wzyty25R+R0Bv4RDotewTq7E9WEW3QN3yL+T+K8y70uNuZKJMpIwwSmRQA3RBh0xwEXClJaxND9JDeXRf6g9WUBRPr5UphKrXcwJogpSczAkdUEqSxlVzgkq4/SvpT6Ebrz515Y+azuLVftYrlZaKyElJ2nONJGWSwJGA8mFsI4nuZXOHdTVT+PohEFMU65JogSS4F9OdA4JYRokl8BSK9ihHX3agH0CqalTSkGsgkpuiDSYB6k8DhPlKuapjNGIQ0udg/ePr1RYrbl1lHCWCiIREwJxaghqYblAjRwPrvSVtWiPbx9frKYJokgdUTGGi8ooTQyl4feDYaixoaETB7+T34Fv11t6CsXMCK0l5YTTNA1XkwRicpGQVAPLHc1TyPVBr+ZN/IOS9U8gtPOmzlfgIFrDX9bvpckMlyc3Vw16P5pBC6Ml5yN2NNikx300EiN6NJh2Zds1OK6waxsojwbzzpRF/hZvP9ffsBobrS1LlLRJGKlMIYvullitNy3D+ULfD+BTt+1uFrw4b9AVN5t9raGzzu1An3BRL3GfuEb3udPw7JucV/klVBdoQ8/6eN2ah/aQhc5cYdMWT7y3X2wjO8UKm2Cvab1YhH+q33j0J3iHPENfXITP10Wwwl7Fbm5VNsMSW3zlfZ0X0IaR3dU8kFgVfOjKsrfZMV7Csqib4CIHwR/hgO1nwkM82nuJT74DpQAgz7ILAAA=" generateConnectionHelper="true" generateStoredProcedures="false" fieldNameCase="Unchanged" generateDefaultConstructors="false" useNameOf="true" connectionStringName="RepositoryPattern" createdInVersion="22.1.3.0" generateJsonSerializationContractResolver="false" generateServiceCollectionExtensions="false" lastModifiedInVersion="22.1.3.0" name="RepositoryPattern" xmlns="http://schemas.microsoft.com/dsltools/ORMDataModel">
+  <classes>
+    <dataBaseObjectModelHasClasses Id="2b39f5c7-8780-4494-9fe3-1cd3de21ba91">
+      <xpObject Id="a85f1fff-c01a-455f-958e-357b7ebe6f37" name="UserXPO" baseClass="XPObject" userFileName="UserXPO" designerFileName="UserXPO.Designer" className="UserXPO" virtualName="UserXPO">
+        <fields>
+          <generalXpObjectHasFields Id="b54535e1-83d7-4315-a3d6-693d3e998ef7">
+            <field Id="625475b4-1320-4a0b-8bef-ba237158464b" name="UserName" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="50" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="2a1ba66a-3523-4ad8-982c-96b91e6d17a0">
+            <field Id="157d8f62-ee50-4cab-9fef-19105ff30469" name="Email" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="f970ceec-bc19-43a4-89a3-c5e9ab3fb06f">
+      <xpObject Id="58853442-9c18-4d24-ab8a-c33df27cd4ff" name="StudentXPO" baseClass="XPObject" userFileName="StudentXPO" designerFileName="StudentXPO.Designer" className="StudentXPO" virtualName="StudentXPO">
+        <fields>
+          <generalXpObjectHasFields Id="7161cec7-882b-40ad-a3a1-c581ac19d896">
+            <field Id="71a60928-753e-4642-8ca7-18a424a19d31" name="Name" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="8efa2a27-e3eb-4e35-8ccc-0fc999600b99">
+            <field Id="9f555a65-462b-4bec-8c26-c32562946eb3" name="Grade" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="fb8c02aa-ccf3-4b1c-9f6e-2be7e806640c">
+            <field Id="3d882df0-2193-4ee7-a69b-e83d23e8e2e3" name="Pass" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a4af7950-d3e0-40fc-bd36-91b03ebdd49a">
+            <field Id="807ee39f-56e0-4b58-b00e-3e6296b082db" name="AddedBy" virtualColumnType="UserXPO" logicalType="UserXPO" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="d779f0da-421d-48e2-8a24-3d85669e6a64">
+            <field Id="1b388402-2099-4d4a-bc37-98a1cf0c9ac8" name="LastUpdateBy" virtualColumnType="UserXPO" logicalType="UserXPO" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+  </classes>
+</dataBaseObjectModel>
