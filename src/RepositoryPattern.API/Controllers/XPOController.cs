@@ -11,7 +11,7 @@ namespace RepositoryPattern.API.Controllers
         public XPOController() { }
 
         [HttpGet]
-        public Validation_ResultDTO UpdateSchema()
+        public ValidationResultDTO UpdateSchema()
         {
             var _validation_ResultDTO = ORM_Helper.UpdateSchema();
             return _validation_ResultDTO;

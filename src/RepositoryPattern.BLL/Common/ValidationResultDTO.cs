@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RepositoryPattern.BLL.Common
 {
-    public class Validation_ResultDTO
+    public class ValidationResultDTO
     {
         #region Base Properties
         public int ID { get; set; }
@@ -16,17 +16,17 @@ namespace RepositoryPattern.BLL.Common
         #endregion
 
         #region Extended Properties
-        public List<Validation_ResultDTO> Validation_ResultList { get; set; }
+        public List<ValidationResultDTO> Validation_ResultList { get; set; }
         public dynamic Value { get; set; }
 
         #endregion
 
         #region Constructor
-        public Validation_ResultDTO()
+        public ValidationResultDTO()
         {
             Result = true;
             Message = "Success";
-            Validation_ResultList = new List<Validation_ResultDTO>();
+            Validation_ResultList = new List<ValidationResultDTO>();
         }
         #endregion
 

@@ -9,9 +9,9 @@ namespace RepositoryPattern.BLL.Common
 {
     public class ORM_Helper
     {
-        public static Validation_ResultDTO UpdateSchema()
+        public static ValidationResultDTO UpdateSchema()
         {
-            var _validation_resultDTO = new Validation_ResultDTO { Description = "The DB has been updated successfully" };
+            var _validation_resultDTO = new ValidationResultDTO { Description = "The DB has been updated successfully" };
             try
             {
                 using (var _unit = XPO_Helper.GetNewSession())
