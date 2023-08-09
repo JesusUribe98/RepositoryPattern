@@ -5,19 +5,18 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2EE56618-840D-46C3-9716-EB0CBF3CDE21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryPattern.DAL", "src\RepositoryPattern.DAL\RepositoryPattern.DAL.csproj", "{E7920CD4-A7F8-4A64-8F58-228F3FC51EBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryPattern.DAL", "src\RepositoryPattern.DAL\RepositoryPattern.DAL.csproj", "{E7920CD4-A7F8-4A64-8F58-228F3FC51EBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryPattern.BLL", "src\RepositoryPattern.BLL\RepositoryPattern.BLL.csproj", "{A1AC98D8-EB4B-42FD-9265-6E9012A200E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryPattern.BLL", "src\RepositoryPattern.BLL\RepositoryPattern.BLL.csproj", "{A1AC98D8-EB4B-42FD-9265-6E9012A200E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryPattern.API", "src\RepositoryPattern.API\RepositoryPattern.API.csproj", "{AB1D006E-364C-488D-854B-A8B87A763199}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryPattern.API", "src\RepositoryPattern.API\RepositoryPattern.API.csproj", "{AB1D006E-364C-488D-854B-A8B87A763199}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryPattern.Console", "src\RepositoryPattern.Console\RepositoryPattern.Console.csproj", "{A24EE801-F7E3-40CC-BBBE-D6E5C0341ED3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E7920CD4-A7F8-4A64-8F58-228F3FC51EBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -32,10 +31,20 @@ Global
 		{AB1D006E-364C-488D-854B-A8B87A763199}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB1D006E-364C-488D-854B-A8B87A763199}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB1D006E-364C-488D-854B-A8B87A763199}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A24EE801-F7E3-40CC-BBBE-D6E5C0341ED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A24EE801-F7E3-40CC-BBBE-D6E5C0341ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A24EE801-F7E3-40CC-BBBE-D6E5C0341ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A24EE801-F7E3-40CC-BBBE-D6E5C0341ED3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E7920CD4-A7F8-4A64-8F58-228F3FC51EBF} = {2EE56618-840D-46C3-9716-EB0CBF3CDE21}
 		{A1AC98D8-EB4B-42FD-9265-6E9012A200E6} = {2EE56618-840D-46C3-9716-EB0CBF3CDE21}
 		{AB1D006E-364C-488D-854B-A8B87A763199} = {2EE56618-840D-46C3-9716-EB0CBF3CDE21}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81C513E5-A45D-4D54-A6A2-AE8B0CFBA8B9}
 	EndGlobalSection
 EndGlobal
