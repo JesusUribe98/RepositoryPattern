@@ -1,4 +1,3 @@
-
 using RepositoryPattern.BLL.Common;
 using System;
 using System.Collections.Generic;
@@ -8,6 +7,8 @@ namespace RepositoryPattern.BLL.Features.User
 {
     public class User_Validator
     {
+
+        //Funciones para validar
         public static ValidationResultDTO CreateUser_Validation(UserDTO UserDTO)
         {
             var _ValidationResultDTO = new ValidationResultDTO
@@ -17,8 +18,9 @@ namespace RepositoryPattern.BLL.Features.User
             try
             {
                 var _validation_ResultList = new List<ValidationResultDTO>();
-                
+
                 // Field Validation
+                // Validar si el nombre no esta vacio o nulo
                 if (string.IsNullOrEmpty(UserDTO.UserName))
                 {
                     _validation_ResultList.Add(new ValidationResultDTO
@@ -28,6 +30,8 @@ namespace RepositoryPattern.BLL.Features.User
                         Description = " Please, complete the missing information ", 
                     });
                 }
+
+                // Validar si el email no esta vacio o nulo
                 if (string.IsNullOrEmpty(UserDTO.Email))
                 {
                     _validation_ResultList.Add(new ValidationResultDTO
@@ -66,8 +70,9 @@ namespace RepositoryPattern.BLL.Features.User
             try
             {
                 var _validation_ResultList = new List<ValidationResultDTO>();
-                
+
                 // Field Validation
+                // Validar que se envio un ID para su actualizacion
                 if (UserDTO.ID == null || UserDTO.ID == 0)
                 {
                     _validation_ResultList.Add(new ValidationResultDTO
@@ -77,6 +82,8 @@ namespace RepositoryPattern.BLL.Features.User
                         Description = "Please, complete the missing information ",
                     });
                 }
+
+                // Validar si el nombre no esta vacio o nulo
                 if (string.IsNullOrEmpty(UserDTO.UserName))
                 {
                     _validation_ResultList.Add(new ValidationResultDTO
@@ -86,6 +93,8 @@ namespace RepositoryPattern.BLL.Features.User
                         Description = " Please, complete the missing information ", 
                     });
                 }
+
+                // Validar si el email no esta vacio o nulo
                 if (string.IsNullOrEmpty(UserDTO.Email))
                 {
                     _validation_ResultList.Add(new ValidationResultDTO
@@ -125,8 +134,9 @@ namespace RepositoryPattern.BLL.Features.User
             try
             {
                 var _validation_ResultList = new List<ValidationResultDTO>();
-                
+
                 // Field Validation
+                // Validar que se envio un ID para su actualizacion
                 if (UserDTO.ID == null || UserDTO.ID == 0)
                 {
                     _validation_ResultList.Add(new ValidationResultDTO

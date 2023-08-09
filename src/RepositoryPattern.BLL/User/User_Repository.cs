@@ -14,19 +14,24 @@ namespace RepositoryPattern.BLL.Features.User
             var _userList = new List<UserDTO>();
             try
             {
-                // User Filters
+                // Filtros de usuario
                 var _groupOperator = User_Filter.GetUserFilters(UserDTO);
                 
 
                 using (var _session = XPO_Helper.GetNewSession())
                 {
+                    //Consultar registros de usuarios de la base de datos
+
                     var _userCollection = new XPCollection<UserXPO>(_session, _groupOperator)
                     {
+                        //ordenar de forma ascendente los ID los resultados de la consulta
                         Sorting = new SortingCollection(new SortProperty(nameof(UserXPO.Oid), SortingDirection.Ascending))
                     };
 
+                    //verificar si hubo algun registro encontrado
                     if (_userCollection.AsQueryable().Count() > 0)
                     {
+                        //mapear los objetos de tipo xpo a dto's
                         _userList = _userCollection.Select(UserXPO => UserMap.XPOToDTO(UserXPO)).ToList();
                     }
                 }

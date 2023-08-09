@@ -17,21 +17,22 @@ namespace RepositoryPattern.BLL.Features.Student
             var _studentList = new List<StudentDTO>();
             try
             {
-                // Student Filters
+                // Filtros de estudiantes
                 var _groupOperator = Student_Filter.GetStudentFilters(StudentDTO);
-                var _sortProperty = new SortProperty();
                 
 
                 using (var _session = XPO_Helper.GetNewSession())
                 {
+                    //Consultar registros de estudiantes de la base de datos
                     var _studentCollection = new XPCollection<StudentXPO>(_session, _groupOperator)
                     {
-
+                        //ordenar de forma ascendente los ID los resultados de la consulta 
                         Sorting = new SortingCollection(new SortProperty(nameof(StudentXPO.Oid), SortingDirection.Ascending))
                     };
-
+                    //verificar si hubo algun registro encontrado
                     if (_studentCollection.AsQueryable().Count() > 0)
                     {
+                        //mapear los objetos de tipo xpo a dto's
                         _studentList = _studentCollection.Select(StudentXPO => StudentMap.XPOToDTO(StudentXPO)).ToList();
                     }
                 }
@@ -53,7 +54,9 @@ namespace RepositoryPattern.BLL.Features.Student
             {
                 using (var _unit = XPO_Helper.GetNewUnitOfWork())
                 {
+                    //mapear el DTO a XPO
                     var _studentXPO = StudentMap.DTOtoXPO(StudentDTO, _unit);
+                    //Guardar
                     _unit.Save(_studentXPO);
                     _unit.CommitChanges();
                 }
@@ -77,7 +80,9 @@ namespace RepositoryPattern.BLL.Features.Student
             {
                 using (var _unit = XPO_Helper.GetNewUnitOfWork())
                 {
+                    //mapear el dto a xpo
                     var _studentXPO = StudentMap.DTOtoXPO(StudentDTO, _unit);
+                    //actualizar
                     _unit.Save(_studentXPO);
                     _unit.CommitChanges();
                 }
@@ -101,7 +106,9 @@ namespace RepositoryPattern.BLL.Features.Student
             {
                 using (var _unit = XPO_Helper.GetNewUnitOfWork())
                 {
+                    //mapear el dto a xpo
                     var _studentXPO = StudentMap.DTOtoXPO(StudentDTO, _unit);
+                    //Eliminar
                     _unit.Delete(_studentXPO);
                     _unit.CommitChanges();
                     _unit.PurgeDeletedObjects();

@@ -6,32 +6,38 @@ using RepositoryPattern.BLL.Common;
 
 namespace RepositoryPattern.BLL.Features.User
 {
-    public class User_Helper
+    public class User_Service
     {
         #region Global CRUD
         public static ValidationResultDTO CreateUser_Global(UserDTO UserDTO)
         {
+            //validation
             var _validationResultDTO = User_Validator.CreateUser_Validation(UserDTO);
             if (_validationResultDTO.Result)
             {
+                //more business logic
                 _validationResultDTO = User_Repository.CreateUser(UserDTO);
             }
             return _validationResultDTO;
         }
         public static ValidationResultDTO UpdateUser_Global(UserDTO UserDTO)
         {
+            //validation
             var _validationResultDTO = User_Validator.UpdateUser_Validation(UserDTO);
             if (_validationResultDTO.Result)
             {
+                //more business logic
                 _validationResultDTO = User_Repository.UpdateUser(UserDTO);
             }
             return _validationResultDTO;
         }
         public static ValidationResultDTO DeleteUser_Global(UserDTO UserDTO)
         {
+            //validation
             var _validationResultDTO = User_Validator.DeleteUser_Validation(UserDTO);
             if (_validationResultDTO.Result)
             {
+                //more business logic
                 _validationResultDTO = User_Repository.DeleteUser(UserDTO);
             }
             return _validationResultDTO;

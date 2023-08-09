@@ -6,14 +6,16 @@ using RepositoryPattern.BLL.Common;
 
 namespace RepositoryPattern.BLL.Features.Student
 {
-    public class Student_Helper
+    public class Student_Service
     {
         #region Global CRUD
         public static ValidationResultDTO CreateStudent_Global(StudentDTO StudentDTO)
         {
+            //Validate DTO
             var _validationResultDTO = Student_Validator.CreateStudent_Validation(StudentDTO);
             if (_validationResultDTO.Result)
             {
+                //More Business Logic
                 if(StudentDTO.Grade > 70)
                 {
                     StudentDTO.Pass = true;
@@ -29,9 +31,11 @@ namespace RepositoryPattern.BLL.Features.Student
         }
         public static ValidationResultDTO UpdateStudent_Global(StudentDTO StudentDTO)
         {
+            //Validate DTO
             var _validationResultDTO = Student_Validator.UpdateStudent_Validation(StudentDTO);
             if (_validationResultDTO.Result)
             {
+                //More Business Logic
                 if (StudentDTO.Grade > 70)
                 {
                     StudentDTO.Pass = true;
@@ -46,9 +50,11 @@ namespace RepositoryPattern.BLL.Features.Student
         }
         public static ValidationResultDTO DeleteStudent_Global(StudentDTO StudentDTO)
         {
+            //Validate DTO
             var _validationResultDTO = Student_Validator.DeleteStudent_Validation(StudentDTO);
             if (_validationResultDTO.Result)
             {
+                //More business Logic
                 _validationResultDTO = Student_Repository.DeleteStudent(StudentDTO);
             }
             return _validationResultDTO;

@@ -8,6 +8,7 @@ namespace RepositoryPattern.BLL.Features.Student
 {
     public class Student_Validator
     {
+        //Funciones para validar
         public static ValidationResultDTO CreateStudent_Validation(StudentDTO StudentDTO)
         {
             var _ValidationResultDTO = new ValidationResultDTO
@@ -18,7 +19,7 @@ namespace RepositoryPattern.BLL.Features.Student
             {
                 var _validation_ResultList = new List<ValidationResultDTO>();
                 
-                // Field Validation
+                // Validar si el nombre no esta vacio o nulo
                 if (string.IsNullOrEmpty(StudentDTO.Name))
                 {
                     _validation_ResultList.Add(new ValidationResultDTO
@@ -28,6 +29,7 @@ namespace RepositoryPattern.BLL.Features.Student
                         Description = " Please, complete the missing information ", 
                     });
                 }
+                //Validar si la calificacion esta en el rango permitido
                 if (StudentDTO.Grade<0 || StudentDTO.Grade >100)
                 {
                     _validation_ResultList.Add(new ValidationResultDTO
@@ -39,7 +41,7 @@ namespace RepositoryPattern.BLL.Features.Student
                 }
                 
                 
-                // if list contains a error, update main validation result
+                // Si alguna validacion no paso, retonar la lista de errores
                 if (_validation_ResultList.Count > 0)
                 {
                     _ValidationResultDTO.Result = false;
@@ -68,7 +70,7 @@ namespace RepositoryPattern.BLL.Features.Student
             {
                 var _validation_ResultList = new List<ValidationResultDTO>();
                 
-                // Field Validation
+                // Validar que se envio un ID para su actualizacion
                 if (StudentDTO.ID == null || StudentDTO.ID == 0)
                 {
                     _validation_ResultList.Add(new ValidationResultDTO
@@ -78,6 +80,8 @@ namespace RepositoryPattern.BLL.Features.Student
                         Description = "Please, complete the missing information ",
                     });
                 }
+
+                // Validar si el nombre no esta vacio o nulo
                 if (string.IsNullOrEmpty(StudentDTO.Name))
                 {
                     _validation_ResultList.Add(new ValidationResultDTO
@@ -87,6 +91,7 @@ namespace RepositoryPattern.BLL.Features.Student
                         Description = " Please, complete the missing information ", 
                     });
                 }
+                //Validar si la calificacion esta en el rango permitido
                 if (StudentDTO.Grade < 0 || StudentDTO.Grade > 100)
                 {
                     _validation_ResultList.Add(new ValidationResultDTO
@@ -96,7 +101,7 @@ namespace RepositoryPattern.BLL.Features.Student
                         Description = " Please, complete the missing information ",
                     });
                 }
-
+                //Validar si se esta enviando el id que esta realizando la actualizacion
                 if (StudentDTO.LastUpdateByID == null || StudentDTO.LastUpdateByID == 0)
                 {
                     _validation_ResultList.Add(new ValidationResultDTO
@@ -135,8 +140,9 @@ namespace RepositoryPattern.BLL.Features.Student
             try
             {
                 var _validation_ResultList = new List<ValidationResultDTO>();
-                
-                // Field Validation
+
+
+                // Validar que se envio un ID para su eliminacion
                 if (StudentDTO.ID == null || StudentDTO.ID == 0)
                 {
                     _validation_ResultList.Add(new ValidationResultDTO

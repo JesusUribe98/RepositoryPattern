@@ -6,6 +6,7 @@ namespace RepositoryPattern.BLL.Features.User
 {
     public class UserMap
     {
+        //Funcion para mapear objetos de tipo XPO a DTO
         public static UserDTO XPOToDTO(UserXPO UserXPO)
         {
             var _userDTO = new UserDTO();
@@ -22,7 +23,7 @@ namespace RepositoryPattern.BLL.Features.User
             }
             return _userDTO;
         }
-
+        //Funcion para mapear objetos de tipo DTO a XPO
         public static UserXPO DTOtoXPO(UserDTO UserDTO, UnitOfWork UnitOfWork)
         {
             UserXPO _userXPO;
